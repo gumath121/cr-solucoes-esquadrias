@@ -87,7 +87,6 @@
       gap: 30px;
     }
 
-    /* LOGO PEQUENO DO TOPO */
     .header-logo {
       width: 125px;
       height: auto;
@@ -175,13 +174,6 @@
       z-index: 1;
     }
 
-    /*
-      ALTERAÇÃO:
-      O conteúdo agora ocupa a área normal do Hero.
-      A foto fica posicionada por trás, ocupando toda
-      a lateral direita e entrando visualmente na área
-      do título.
-    */
     .hero-grid {
       width: min(var(--container), calc(100% - 48px));
       margin: 0 auto;
@@ -206,7 +198,6 @@
       margin-bottom: 26px;
     }
 
-    /* LOGO GRANDE DO HERO */
     .hero-logo {
       width: 315px;
       max-width: 80%;
@@ -274,16 +265,13 @@
       background: rgba(255, 255, 255, 0.06);
     }
 
-    /*
-      ALTERAÇÃO DESKTOP:
-      A foto deixa de ser um bloco quadrado.
-      Ela ocupa toda a altura do Hero e aproximadamente
-      65% da largura da tela, ficando atrás do conteúdo.
-    */
+    /* FOTO DO HERO - ENCOSTADA NA BORDA DIREITA */
+
     .hero-photo {
       position: absolute;
       top: 0;
-      right: calc((min(100vw, var(--container)) - var(--container)) / 2);
+      right: 0;
+      bottom: 0;
       width: 67vw;
       max-width: 1050px;
       height: 100%;
@@ -874,11 +862,6 @@
         font-size: 10px;
       }
 
-      /*
-        MOBILE:
-        A foto passa a ser o fundo de todo o Hero,
-        ficando atrás do logo, título e textos.
-      */
       .hero {
         padding-top: 74px;
         min-height: 760px;
@@ -905,7 +888,7 @@
       .hero-photo {
         position: absolute;
         inset: 0;
-        width: 100%;
+        width: 100vw;
         max-width: none;
         height: 100%;
         z-index: 1;
@@ -944,10 +927,6 @@
         font-size: clamp(46px, 9vw, 65px);
       }
 
-      /*
-        Como a foto já virou fundo,
-        ela não cria mais espaço abaixo do conteúdo.
-      */
       .hero-photo img {
         object-position: center;
       }
@@ -1090,6 +1069,7 @@
       }
 
       .hero-photo {
+        width: 100vw;
         height: 100%;
       }
 
@@ -1218,6 +1198,23 @@
 
     <section class="hero" id="inicio">
 
+      <!-- FOTO AGORA É FILHA DIRETA DO HERO,
+           GARANTINDO QUE ENCOSTE NA BORDA DIREITA -->
+
+      <div class="hero-photo">
+
+        <img
+          src="foto2.jpg"
+          alt="Projeto realizado pela CR Soluções em Esquadrias"
+        >
+
+        <div class="hero-photo-label">
+          Projetos e instalações
+        </div>
+
+      </div>
+
+
       <div class="hero-grid">
 
         <div class="hero-content">
@@ -1257,20 +1254,6 @@
               Ver projetos
             </a>
 
-          </div>
-
-        </div>
-
-
-        <div class="hero-photo">
-
-          <img
-            src="foto2.jpg"
-            alt="Projeto realizado pela CR Soluções em Esquadrias"
-          >
-
-          <div class="hero-photo-label">
-            Projetos e instalações
           </div>
 
         </div>
