@@ -198,8 +198,6 @@
       margin-bottom: 30px;
     }
 
-    /* LOGO PRINCIPAL DO HERO */
-
     .hero-logo {
       width: 440px;
       max-width: 92%;
@@ -267,7 +265,7 @@
       background: rgba(255, 255, 255, 0.06);
     }
 
-    /* FOTO DO HERO - ENCOSTADA NA BORDA DIREITA */
+    /* FOTO DO HERO */
 
     .hero-photo {
       position: absolute;
@@ -434,8 +432,6 @@
       gap: 14px;
     }
 
-    /* GALERIA RECOLHIDA - DESKTOP MOSTRA 8 */
-
     .gallery.collapsed .gallery-item:nth-child(n+9) {
       display: none;
     }
@@ -457,8 +453,6 @@
     .gallery-item:hover img {
       transform: scale(1.045);
     }
-
-    /* BOTÃO DA GALERIA */
 
     .gallery-toggle {
       margin: 32px auto 0;
@@ -814,9 +808,33 @@
       font-size: 12px;
     }
 
+    /* INSTAGRAM DO RODAPÉ */
+
     .footer-instagram {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
       font-size: 12px;
       color: #d9dee4;
+      transition: 0.25s ease;
+    }
+
+    .footer-instagram:hover {
+      color: #ffffff;
+    }
+
+    .footer-instagram svg {
+      width: 15px;
+      height: 15px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.8;
+      transition: 0.25s ease;
+    }
+
+    .footer-instagram .instagram-dot {
+      fill: currentColor;
+      stroke: none;
     }
 
     /* =========================
@@ -1321,9 +1339,7 @@
 
 <body>
 
-  <!-- =========================
-       HEADER
-  ========================== -->
+  <!-- HEADER -->
 
   <header>
     <div class="container header-inner">
@@ -1352,9 +1368,7 @@
   </header>
 
 
-  <!-- =========================
-       HERO
-  ========================== -->
+  <!-- HERO -->
 
   <main>
 
@@ -1378,14 +1392,12 @@
 
         <div class="hero-content">
 
-          <!-- LOGO PRIMEIRO -->
           <img
             src="logo.png"
             alt="CR Soluções em Esquadrias"
             class="hero-logo"
           >
 
-          <!-- ASSINATURA ABAIXO DO LOGO -->
           <div class="hero-kicker">
             Esquadrias • Vidros • Arquitetura
           </div>
@@ -1423,9 +1435,7 @@
     </section>
 
 
-    <!-- =========================
-         EMPRESA
-    ========================== -->
+    <!-- EMPRESA -->
 
     <section class="intro" id="empresa">
 
@@ -1472,9 +1482,7 @@
     </section>
 
 
-    <!-- =========================
-         PROJETOS / GALERIA
-    ========================== -->
+    <!-- PROJETOS / GALERIA -->
 
     <section class="gallery-section" id="projetos">
 
@@ -1504,77 +1512,24 @@
 
         <div class="gallery collapsed">
 
-          <div class="gallery-item">
-            <img src="foto2.jpg" alt="Projeto CR Soluções em Esquadrias">
-          </div>
-
-          <div class="gallery-item">
-            <img src="foto3.jpg" alt="Projeto CR Soluções em Esquadrias">
-          </div>
-
-          <div class="gallery-item">
-            <img src="foto5.jpg" alt="Projeto CR Soluções em Esquadrias">
-          </div>
-
-          <div class="gallery-item">
-            <img src="foto6.jpg" alt="Projeto CR Soluções em Esquadrias">
-          </div>
-
-          <div class="gallery-item">
-            <img src="foto7.jpg" alt="Projeto CR Soluções em Esquadrias">
-          </div>
-
-          <div class="gallery-item">
-            <img src="foto8.jpg" alt="Projeto CR Soluções em Esquadrias">
-          </div>
-
-          <div class="gallery-item">
-            <img src="foto9.jpg" alt="Projeto CR Soluções em Esquadrias">
-          </div>
-
-          <div class="gallery-item">
-            <img src="foto10.jpg" alt="Projeto CR Soluções em Esquadrias">
-          </div>
-
-          <div class="gallery-item">
-            <img src="foto11.jpg" alt="Projeto CR Soluções em Esquadrias">
-          </div>
-
-          <div class="gallery-item">
-            <img src="foto12.jpg" alt="Projeto CR Soluções em Esquadrias">
-          </div>
-
-          <div class="gallery-item">
-            <img src="foto13.jpg" alt="Projeto CR Soluções em Esquadrias">
-          </div>
-
-          <div class="gallery-item">
-            <img src="foto14.jpg" alt="Projeto CR Soluções em Esquadrias">
-          </div>
-
-          <div class="gallery-item">
-            <img src="foto15.jpg" alt="Projeto CR Soluções em Esquadrias">
-          </div>
-
-          <div class="gallery-item">
-            <img src="foto16.jpg" alt="Projeto CR Soluções em Esquadrias">
-          </div>
-
-          <div class="gallery-item">
-            <img src="foto17.jpg" alt="Projeto CR Soluções em Esquadrias">
-          </div>
-
-          <div class="gallery-item">
-            <img src="foto18.jpg" alt="Projeto CR Soluções em Esquadrias">
-          </div>
-
-          <div class="gallery-item">
-            <img src="foto19.jpg" alt="Projeto CR Soluções em Esquadrias">
-          </div>
-
-          <div class="gallery-item">
-            <img src="foto20.jpg" alt="Projeto CR Soluções em Esquadrias">
-          </div>
+          <div class="gallery-item"><img src="foto2.jpg" alt="Projeto CR Soluções em Esquadrias"></div>
+          <div class="gallery-item"><img src="foto3.jpg" alt="Projeto CR Soluções em Esquadrias"></div>
+          <div class="gallery-item"><img src="foto5.jpg" alt="Projeto CR Soluções em Esquadrias"></div>
+          <div class="gallery-item"><img src="foto6.jpg" alt="Projeto CR Soluções em Esquadrias"></div>
+          <div class="gallery-item"><img src="foto7.jpg" alt="Projeto CR Soluções em Esquadrias"></div>
+          <div class="gallery-item"><img src="foto8.jpg" alt="Projeto CR Soluções em Esquadrias"></div>
+          <div class="gallery-item"><img src="foto9.jpg" alt="Projeto CR Soluções em Esquadrias"></div>
+          <div class="gallery-item"><img src="foto10.jpg" alt="Projeto CR Soluções em Esquadrias"></div>
+          <div class="gallery-item"><img src="foto11.jpg" alt="Projeto CR Soluções em Esquadrias"></div>
+          <div class="gallery-item"><img src="foto12.jpg" alt="Projeto CR Soluções em Esquadrias"></div>
+          <div class="gallery-item"><img src="foto13.jpg" alt="Projeto CR Soluções em Esquadrias"></div>
+          <div class="gallery-item"><img src="foto14.jpg" alt="Projeto CR Soluções em Esquadrias"></div>
+          <div class="gallery-item"><img src="foto15.jpg" alt="Projeto CR Soluções em Esquadrias"></div>
+          <div class="gallery-item"><img src="foto16.jpg" alt="Projeto CR Soluções em Esquadrias"></div>
+          <div class="gallery-item"><img src="foto17.jpg" alt="Projeto CR Soluções em Esquadrias"></div>
+          <div class="gallery-item"><img src="foto18.jpg" alt="Projeto CR Soluções em Esquadrias"></div>
+          <div class="gallery-item"><img src="foto19.jpg" alt="Projeto CR Soluções em Esquadrias"></div>
+          <div class="gallery-item"><img src="foto20.jpg" alt="Projeto CR Soluções em Esquadrias"></div>
 
         </div>
 
@@ -1598,9 +1553,7 @@
     </section>
 
 
-    <!-- =========================
-         SOLUÇÕES
-    ========================== -->
+    <!-- SOLUÇÕES -->
 
     <section class="solutions" id="solucoes">
 
@@ -1631,77 +1584,18 @@
 
         <div class="services-list">
 
-          <div class="service">
-            <div class="service-number">01</div>
-            <div class="service-name">Esquadrias em alumínio</div>
-            <div class="service-arrow">↗</div>
-          </div>
-
-          <div class="service">
-            <div class="service-number">02</div>
-            <div class="service-name">Esquadrias em PVC</div>
-            <div class="service-arrow">↗</div>
-          </div>
-
-          <div class="service">
-            <div class="service-number">03</div>
-            <div class="service-name">Esquadrias automatizadas</div>
-            <div class="service-arrow">↗</div>
-          </div>
-
-          <div class="service">
-            <div class="service-number">04</div>
-            <div class="service-name">Espelhos, LED e Touch</div>
-            <div class="service-arrow">↗</div>
-          </div>
-
-          <div class="service">
-            <div class="service-number">05</div>
-            <div class="service-name">Telhados de vidro e policarbonato</div>
-            <div class="service-arrow">↗</div>
-          </div>
-
-          <div class="service">
-            <div class="service-number">06</div>
-            <div class="service-name">Telas mosquiteiro recolhíveis</div>
-            <div class="service-arrow">↗</div>
-          </div>
-
-          <div class="service">
-            <div class="service-number">07</div>
-            <div class="service-name">Linha temperado</div>
-            <div class="service-arrow">↗</div>
-          </div>
-
-          <div class="service">
-            <div class="service-number">08</div>
-            <div class="service-name">Portas e fachadas em ACM</div>
-            <div class="service-arrow">↗</div>
-          </div>
-
-          <div class="service">
-            <div class="service-number">09</div>
-            <div class="service-name">Brise</div>
-            <div class="service-arrow">↗</div>
-          </div>
-
-          <div class="service">
-            <div class="service-number">10</div>
-            <div class="service-name">Fachada pele de vidro</div>
-            <div class="service-arrow">↗</div>
-          </div>
-
-          <div class="service">
-            <div class="service-number">11</div>
-            <div class="service-name">Muxarabi</div>
-            <div class="service-arrow">↗</div>
-          </div>
-
-          <div class="service">
-            <div class="service-number">12</div>
-            <div class="service-name">Painéis ripado em alumínio e PVC</div>
-            <div class="service-arrow">↗</div>
-          </div>
+          <div class="service"><div class="service-number">01</div><div class="service-name">Esquadrias em alumínio</div><div class="service-arrow">↗</div></div>
+          <div class="service"><div class="service-number">02</div><div class="service-name">Esquadrias em PVC</div><div class="service-arrow">↗</div></div>
+          <div class="service"><div class="service-number">03</div><div class="service-name">Esquadrias automatizadas</div><div class="service-arrow">↗</div></div>
+          <div class="service"><div class="service-number">04</div><div class="service-name">Espelhos, LED e Touch</div><div class="service-arrow">↗</div></div>
+          <div class="service"><div class="service-number">05</div><div class="service-name">Telhados de vidro e policarbonato</div><div class="service-arrow">↗</div></div>
+          <div class="service"><div class="service-number">06</div><div class="service-name">Telas mosquiteiro recolhíveis</div><div class="service-arrow">↗</div></div>
+          <div class="service"><div class="service-number">07</div><div class="service-name">Linha temperado</div><div class="service-arrow">↗</div></div>
+          <div class="service"><div class="service-number">08</div><div class="service-name">Portas e fachadas em ACM</div><div class="service-arrow">↗</div></div>
+          <div class="service"><div class="service-number">09</div><div class="service-name">Brise</div><div class="service-arrow">↗</div></div>
+          <div class="service"><div class="service-number">10</div><div class="service-name">Fachada pele de vidro</div><div class="service-arrow">↗</div></div>
+          <div class="service"><div class="service-number">11</div><div class="service-name">Muxarabi</div><div class="service-arrow">↗</div></div>
+          <div class="service"><div class="service-number">12</div><div class="service-name">Painéis ripado em alumínio e PVC</div><div class="service-arrow">↗</div></div>
 
         </div>
 
@@ -1710,9 +1604,7 @@
     </section>
 
 
-    <!-- =========================
-         DESTAQUE
-    ========================== -->
+    <!-- DESTAQUE -->
 
     <section class="feature">
 
@@ -1758,9 +1650,7 @@
     </section>
 
 
-    <!-- =========================
-         CONTATO
-    ========================== -->
+    <!-- CONTATO -->
 
     <section class="contact" id="contato">
 
@@ -1858,9 +1748,7 @@
   </main>
 
 
-  <!-- =========================
-       FOOTER
-  ========================== -->
+  <!-- FOOTER -->
 
   <footer>
 
@@ -1876,12 +1764,41 @@
         © 2026 CR Soluções em Esquadrias. Todos os direitos reservados.
       </div>
 
+      <!-- INSTAGRAM COM ÍCONE -->
+
       <a
         href="https://instagram.com/cr.solucoesemesquadrias"
         target="_blank"
         class="footer-instagram"
+        aria-label="Instagram da CR Soluções em Esquadrias"
       >
+
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <rect
+            x="3"
+            y="3"
+            width="18"
+            height="18"
+            rx="5"
+            ry="5"
+          ></rect>
+
+          <circle
+            cx="12"
+            cy="12"
+            r="4"
+          ></circle>
+
+          <circle
+            cx="17.3"
+            cy="6.8"
+            r="1"
+            class="instagram-dot"
+          ></circle>
+        </svg>
+
         Instagram
+
       </a>
 
     </div>
@@ -1889,9 +1806,7 @@
   </footer>
 
 
-  <!-- =========================
-       LIGHTBOX
-  ========================== -->
+  <!-- LIGHTBOX -->
 
   <div class="lightbox" id="lightbox">
 
@@ -1904,9 +1819,7 @@
   </div>
 
 
-  <!-- =========================
-       WHATSAPP FLUTUANTE
-  ========================== -->
+  <!-- WHATSAPP FLUTUANTE -->
 
   <a
     href="https://wa.me/5515997498555?text=Olá!%20Vi%20o%20site%20e%20gostaria%20de%20solicitar%20um%20orçamento."
