@@ -159,6 +159,7 @@
       right: -250px;
       top: 50%;
       transform: translateY(-50%);
+      z-index: 1;
     }
 
     .hero::after {
@@ -171,22 +172,29 @@
       right: -140px;
       top: 50%;
       transform: translateY(-50%);
+      z-index: 1;
     }
 
+    /*
+      ALTERAÇÃO:
+      O conteúdo agora ocupa a área normal do Hero.
+      A foto fica posicionada por trás, ocupando toda
+      a lateral direita e entrando visualmente na área
+      do título.
+    */
     .hero-grid {
       width: min(var(--container), calc(100% - 48px));
       margin: 0 auto;
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) 520px;
-      align-items: center;
-      gap: 70px;
+      display: block;
       position: relative;
-      z-index: 2;
+      z-index: 3;
       padding: 75px 0;
     }
 
     .hero-content {
       max-width: 650px;
+      position: relative;
+      z-index: 5;
     }
 
     .hero-kicker {
@@ -266,22 +274,54 @@
       background: rgba(255, 255, 255, 0.06);
     }
 
+    /*
+      ALTERAÇÃO DESKTOP:
+      A foto deixa de ser um bloco quadrado.
+      Ela ocupa toda a altura do Hero e aproximadamente
+      65% da largura da tela, ficando atrás do conteúdo.
+    */
     .hero-photo {
-      position: relative;
-      height: 560px;
+      position: absolute;
+      top: 0;
+      right: calc((min(100vw, var(--container)) - var(--container)) / 2);
+      width: 67vw;
+      max-width: 1050px;
+      height: 100%;
       overflow: hidden;
       background: #10243b;
+      z-index: 2;
+    }
+
+    .hero-photo::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      background:
+        linear-gradient(
+          90deg,
+          #07182d 0%,
+          rgba(7, 24, 45, 0.96) 8%,
+          rgba(7, 24, 45, 0.78) 20%,
+          rgba(7, 24, 45, 0.35) 38%,
+          rgba(7, 24, 45, 0.08) 62%,
+          rgba(7, 24, 45, 0.04) 100%
+        );
+      pointer-events: none;
     }
 
     .hero-photo::after {
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(
-        180deg,
-        rgba(7, 24, 45, 0.05),
-        rgba(7, 24, 45, 0.18)
-      );
+      z-index: 3;
+      background:
+        linear-gradient(
+          180deg,
+          rgba(7, 24, 45, 0.15) 0%,
+          rgba(7, 24, 45, 0) 35%,
+          rgba(7, 24, 45, 0.16) 100%
+        );
       pointer-events: none;
     }
 
@@ -294,8 +334,8 @@
     .hero-photo-label {
       position: absolute;
       bottom: 0;
-      left: 0;
-      z-index: 3;
+      right: 0;
+      z-index: 4;
       padding: 17px 20px;
       background: rgba(7, 24, 45, 0.86);
       color: white;
@@ -793,12 +833,12 @@
       }
 
       .hero-grid {
-        grid-template-columns: 1fr 430px;
-        gap: 40px;
+        width: min(var(--container), calc(100% - 48px));
       }
 
       .hero-photo {
-        height: 500px;
+        width: 68vw;
+        max-width: none;
       }
 
       .hero-logo {
@@ -834,19 +874,65 @@
         font-size: 10px;
       }
 
+      /*
+        MOBILE:
+        A foto passa a ser o fundo de todo o Hero,
+        ficando atrás do logo, título e textos.
+      */
       .hero {
         padding-top: 74px;
-        min-height: auto;
+        min-height: 760px;
+        align-items: center;
+      }
+
+      .hero::before,
+      .hero::after {
+        display: none;
       }
 
       .hero-grid {
-        grid-template-columns: 1fr;
+        width: min(100% - 34px, var(--container));
         padding: 65px 0 75px;
-        gap: 50px;
+        display: block;
       }
 
       .hero-content {
         max-width: 700px;
+        position: relative;
+        z-index: 5;
+      }
+
+      .hero-photo {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        max-width: none;
+        height: 100%;
+        z-index: 1;
+      }
+
+      .hero-photo::before {
+        background:
+          linear-gradient(
+            180deg,
+            rgba(7, 24, 45, 0.72) 0%,
+            rgba(7, 24, 45, 0.58) 35%,
+            rgba(7, 24, 45, 0.72) 70%,
+            rgba(7, 24, 45, 0.94) 100%
+          );
+      }
+
+      .hero-photo::after {
+        background:
+          linear-gradient(
+            90deg,
+            rgba(7, 24, 45, 0.35),
+            rgba(7, 24, 45, 0.08)
+          );
+      }
+
+      .hero-photo-label {
+        display: none;
       }
 
       .hero-logo {
@@ -858,8 +944,12 @@
         font-size: clamp(46px, 9vw, 65px);
       }
 
-      .hero-photo {
-        height: 460px;
+      /*
+        Como a foto já virou fundo,
+        ela não cria mais espaço abaixo do conteúdo.
+      */
+      .hero-photo img {
+        object-position: center;
       }
 
       .intro {
@@ -960,6 +1050,10 @@
         padding: 9px 11px;
       }
 
+      .hero {
+        min-height: 760px;
+      }
+
       .hero-grid {
         padding: 50px 0 55px;
         gap: 40px;
@@ -996,7 +1090,7 @@
       }
 
       .hero-photo {
-        height: 360px;
+        height: 100%;
       }
 
       .intro {
