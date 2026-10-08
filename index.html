@@ -1,1 +1,1392 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CR Soluções em Esquadrias | Itapetininga</title>
+
+<meta name="description" content="CR Soluções em Esquadrias. Esquadrias em alumínio e PVC, vidros, automação, fachadas, ACM, brises, muxarabi e soluções arquitetônicas em Itapetininga e região.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --black:#111111;
+    --white:#f8f8f6;
+    --gray:#777;
+    --line:#deded9;
+    --accent:#b78b55;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"DM Sans",sans-serif;
+    background:var(--white);
+    color:var(--black);
+    overflow-x:hidden;
+}
+
+img{
+    display:block;
+    width:100%;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+/* ================= HEADER ================= */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:82px;
+    z-index:1000;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:0 5vw;
+
+    background:rgba(248,248,246,.94);
+    backdrop-filter:blur(12px);
+
+    border-bottom:1px solid rgba(0,0,0,.08);
+}
+
+.logo{
+    width:125px;
+}
+
+.logo img{
+    max-height:55px;
+    object-fit:contain;
+}
+
+nav{
+    display:flex;
+    align-items:center;
+    gap:34px;
+}
+
+nav a{
+    font-size:13px;
+    letter-spacing:.04em;
+    text-transform:uppercase;
+    transition:.25s;
+}
+
+nav a:hover{
+    opacity:.5;
+}
+
+.header-button{
+    padding:12px 19px;
+    border:1px solid var(--black);
+    transition:.25s;
+}
+
+.header-button:hover{
+    background:var(--black);
+    color:white;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:100vh;
+    padding:82px 5vw 0;
+
+    display:grid;
+    grid-template-columns:1fr 1.45fr;
+    gap:5vw;
+    align-items:stretch;
+}
+
+.hero-copy{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding:70px 0;
+}
+
+.eyebrow{
+    font-size:12px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    margin-bottom:28px;
+    color:#666;
+}
+
+.hero h1{
+    font-family:"Manrope",sans-serif;
+    font-size:clamp(48px,6vw,92px);
+    line-height:.94;
+    font-weight:500;
+    letter-spacing:-.055em;
+    max-width:650px;
+}
+
+.hero h1 span{
+    display:block;
+    color:#777;
+}
+
+.hero-description{
+    max-width:470px;
+    margin-top:35px;
+    font-size:17px;
+    line-height:1.7;
+    color:#555;
+}
+
+.hero-actions{
+    display:flex;
+    gap:12px;
+    margin-top:42px;
+}
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:15px 23px;
+
+    font-size:13px;
+    letter-spacing:.03em;
+
+    border:1px solid var(--black);
+
+    transition:.3s;
+}
+
+.btn-dark{
+    background:var(--black);
+    color:white;
+}
+
+.btn-dark:hover{
+    background:transparent;
+    color:var(--black);
+}
+
+.btn-light:hover{
+    background:var(--black);
+    color:white;
+}
+
+.hero-image{
+    position:relative;
+    height:calc(100vh - 82px);
+    min-height:600px;
+    overflow:hidden;
+}
+
+.hero-image img{
+    height:100%;
+    object-fit:cover;
+}
+
+.hero-image::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        90deg,
+        rgba(0,0,0,.04),
+        transparent 50%,
+        rgba(0,0,0,.1)
+    );
+}
+
+/* ================= INTRO ================= */
+
+.intro{
+    padding:150px 10vw;
+    display:grid;
+    grid-template-columns:.8fr 1.2fr;
+    gap:10vw;
+    border-top:1px solid var(--line);
+}
+
+.section-number{
+    font-size:12px;
+    letter-spacing:.12em;
+    color:#888;
+}
+
+.intro h2{
+    font-family:"Manrope",sans-serif;
+    font-weight:500;
+    font-size:clamp(34px,4vw,60px);
+    line-height:1.05;
+    letter-spacing:-.045em;
+    max-width:700px;
+}
+
+.intro p{
+    margin-top:32px;
+    max-width:650px;
+    font-size:17px;
+    line-height:1.8;
+    color:#666;
+}
+
+/* ================= SOLUTIONS ================= */
+
+.solutions{
+    background:#151515;
+    color:white;
+    padding:140px 8vw;
+}
+
+.solutions-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    gap:40px;
+    margin-bottom:80px;
+}
+
+.solutions h2{
+    font-family:"Manrope",sans-serif;
+    font-size:clamp(42px,5vw,75px);
+    line-height:.95;
+    font-weight:500;
+    letter-spacing:-.05em;
+}
+
+.solutions-intro{
+    max-width:400px;
+    color:#aaa;
+    line-height:1.7;
+}
+
+.solution-list{
+    border-top:1px solid #3b3b3b;
+}
+
+.solution{
+    display:grid;
+    grid-template-columns:90px 1fr 1fr;
+    align-items:center;
+
+    padding:30px 0;
+
+    border-bottom:1px solid #3b3b3b;
+
+    transition:.3s;
+}
+
+.solution:hover{
+    padding-left:18px;
+}
+
+.solution-number{
+    font-size:13px;
+    color:#777;
+}
+
+.solution h3{
+    font-family:"Manrope",sans-serif;
+    font-size:27px;
+    font-weight:500;
+}
+
+.solution p{
+    color:#999;
+    line-height:1.6;
+    max-width:500px;
+}
+
+/* ================= PROJECTS ================= */
+
+.projects{
+    padding:150px 5vw;
+}
+
+.projects-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    margin-bottom:70px;
+}
+
+.projects h2{
+    font-family:"Manrope",sans-serif;
+    font-size:clamp(45px,6vw,90px);
+    line-height:.9;
+    font-weight:500;
+    letter-spacing:-.055em;
+}
+
+.projects-header p{
+    max-width:330px;
+    color:#666;
+    line-height:1.6;
+}
+
+/* GALERIA */
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(12,1fr);
+    gap:18px;
+}
+
+.gallery-item{
+    position:relative;
+    overflow:hidden;
+    cursor:pointer;
+    background:#ddd;
+}
+
+.gallery-item:nth-child(1){
+    grid-column:span 7;
+    aspect-ratio:1.35;
+}
+
+.gallery-item:nth-child(2){
+    grid-column:span 5;
+    aspect-ratio:.95;
+}
+
+.gallery-item:nth-child(3){
+    grid-column:span 4;
+    aspect-ratio:1;
+}
+
+.gallery-item:nth-child(4){
+    grid-column:span 8;
+    aspect-ratio:1.6;
+}
+
+.gallery-item:nth-child(5){
+    grid-column:span 5;
+    aspect-ratio:1.15;
+}
+
+.gallery-item:nth-child(6){
+    grid-column:span 7;
+    aspect-ratio:1.4;
+}
+
+.gallery-item:nth-child(n+7){
+    grid-column:span 4;
+    aspect-ratio:1;
+}
+
+.gallery-item img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:transform .8s cubic-bezier(.2,.7,.2,1);
+}
+
+.gallery-item:hover img{
+    transform:scale(1.045);
+}
+
+.gallery-overlay{
+    position:absolute;
+    inset:0;
+
+    display:flex;
+    align-items:flex-end;
+
+    padding:25px;
+
+    background:linear-gradient(
+        transparent 55%,
+        rgba(0,0,0,.65)
+    );
+
+    opacity:0;
+    transition:.35s;
+}
+
+.gallery-item:hover .gallery-overlay{
+    opacity:1;
+}
+
+.gallery-overlay span{
+    color:white;
+    font-size:12px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+}
+
+/* ================= DETAIL ================= */
+
+.detail{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    min-height:600px;
+    background:#e9e9e5;
+}
+
+.detail-image{
+    overflow:hidden;
+}
+
+.detail-image img{
+    height:100%;
+    object-fit:cover;
+}
+
+.detail-content{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding:10vw;
+}
+
+.detail-content small{
+    text-transform:uppercase;
+    letter-spacing:.15em;
+    font-size:11px;
+    color:#777;
+}
+
+.detail-content h2{
+    font-family:"Manrope",sans-serif;
+    font-size:clamp(38px,4vw,65px);
+    font-weight:500;
+    line-height:1;
+    letter-spacing:-.05em;
+    margin:25px 0;
+}
+
+.detail-content p{
+    max-width:500px;
+    color:#666;
+    line-height:1.8;
+}
+
+/* ================= CONTACT ================= */
+
+.contact{
+    background:#111;
+    color:white;
+    padding:140px 8vw;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10vw;
+}
+
+.contact h2{
+    font-family:"Manrope",sans-serif;
+    font-size:clamp(50px,6vw,95px);
+    line-height:.9;
+    font-weight:500;
+    letter-spacing:-.06em;
+}
+
+.contact-text{
+    margin-top:35px;
+    color:#999;
+    max-width:430px;
+    line-height:1.7;
+}
+
+.contact-info{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.contact-item{
+    padding:25px 0;
+    border-bottom:1px solid #333;
+}
+
+.contact-item small{
+    display:block;
+    color:#777;
+    text-transform:uppercase;
+    letter-spacing:.1em;
+    font-size:10px;
+    margin-bottom:8px;
+}
+
+.contact-item a,
+.contact-item span{
+    font-size:18px;
+}
+
+.whatsapp{
+    margin-top:35px;
+    display:inline-flex;
+    width:max-content;
+    padding:16px 25px;
+    background:white;
+    color:#111;
+    transition:.3s;
+}
+
+.whatsapp:hover{
+    background:#d8d8d8;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#111;
+    color:#777;
+    border-top:1px solid #292929;
+    padding:30px 8vw;
+
+    display:flex;
+    justify-content:space-between;
+
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+}
+
+/* ================= LIGHTBOX ================= */
+
+.lightbox{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.96);
+    z-index:2000;
+
+    display:none;
+    align-items:center;
+    justify-content:center;
+
+    padding:40px;
+}
+
+.lightbox.active{
+    display:flex;
+}
+
+.lightbox img{
+    max-width:92vw;
+    max-height:88vh;
+    width:auto;
+    object-fit:contain;
+}
+
+.close{
+    position:absolute;
+    top:25px;
+    right:30px;
+
+    color:white;
+    font-size:35px;
+    cursor:pointer;
+    font-weight:300;
+}
+
+.prev,
+.next{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+
+    color:white;
+    font-size:38px;
+    cursor:pointer;
+
+    padding:20px;
+}
+
+.prev{
+    left:15px;
+}
+
+.next{
+    right:15px;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:850px){
+
+    header{
+        height:70px;
+        padding:0 20px;
+    }
+
+    .logo{
+        width:100px;
+    }
+
+    nav{
+        display:none;
+    }
+
+    .hero{
+        display:flex;
+        flex-direction:column;
+        padding:70px 20px 0;
+        gap:0;
+    }
+
+    .hero-copy{
+        padding:80px 0 55px;
+    }
+
+    .hero h1{
+        font-size:54px;
+    }
+
+    .hero-description{
+        font-size:15px;
+    }
+
+    .hero-image{
+        height:65vh;
+        min-height:400px;
+    }
+
+    .intro{
+        display:block;
+        padding:90px 25px;
+    }
+
+    .intro h2{
+        margin-top:25px;
+    }
+
+    .solutions{
+        padding:90px 25px;
+    }
+
+    .solutions-top{
+        display:block;
+        margin-bottom:55px;
+    }
+
+    .solutions-intro{
+        margin-top:25px;
+    }
+
+    .solution{
+        grid-template-columns:45px 1fr;
+        gap:10px;
+    }
+
+    .solution p{
+        grid-column:2;
+        margin-top:-4px;
+    }
+
+    .projects{
+        padding:90px 20px;
+    }
+
+    .projects-header{
+        display:block;
+        margin-bottom:45px;
+    }
+
+    .projects-header p{
+        margin-top:25px;
+    }
+
+    .gallery{
+        grid-template-columns:1fr 1fr;
+        gap:8px;
+    }
+
+    .gallery-item,
+    .gallery-item:nth-child(n){
+        grid-column:span 1;
+        aspect-ratio:.9;
+    }
+
+    .gallery-item:nth-child(1),
+    .gallery-item:nth-child(4),
+    .gallery-item:nth-child(6){
+        grid-column:span 2;
+        aspect-ratio:1.25;
+    }
+
+    .gallery-overlay{
+        opacity:1;
+        padding:12px;
+    }
+
+    .gallery-overlay span{
+        font-size:9px;
+    }
+
+    .detail{
+        display:block;
+    }
+
+    .detail-image{
+        height:55vh;
+    }
+
+    .detail-content{
+        padding:80px 25px;
+    }
+
+    .contact{
+        padding:90px 25px;
+    }
+
+    .contact-grid{
+        display:block;
+    }
+
+    .contact-info{
+        margin-top:60px;
+    }
+
+    footer{
+        padding:25px;
+        display:block;
+        line-height:2;
+    }
+
+    .lightbox{
+        padding:15px;
+    }
+
+    .prev,
+    .next{
+        font-size:28px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <a href="#" class="logo">
+        <img src="logo.png" alt="CR Soluções em Esquadrias">
+    </a>
+
+    <nav>
+        <a href="#solucoes">Soluções</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#empresa">A empresa</a>
+        <a href="#contato">Contato</a>
+
+        <a
+            href="https://wa.me/5515997498555?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento."
+            target="_blank"
+            class="header-button"
+        >
+            Orçamento
+        </a>
+    </nav>
+
+</header>
+
+
+<main>
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-copy">
+
+        <div class="eyebrow">
+            CR Soluções em Esquadrias
+        </div>
+
+        <h1>
+            Projetos que
+            <span>valorizam espaços.</span>
+        </h1>
+
+        <p class="hero-description">
+            Esquadrias, vidros, fachadas e soluções arquitetônicas
+            para projetos residenciais e comerciais.
+        </p>
+
+        <div class="hero-actions">
+
+            <a
+                href="https://wa.me/5515997498555?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento."
+                target="_blank"
+                class="btn btn-dark"
+            >
+                Solicitar orçamento
+            </a>
+
+            <a href="#projetos" class="btn btn-light">
+                Ver projetos
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="hero-image">
+
+        <img
+            src="foto1.jpg"
+            alt="Projeto realizado pela CR Soluções em Esquadrias"
+        >
+
+    </div>
+
+</section>
+
+
+<!-- INTRO -->
+
+<section class="intro" id="empresa">
+
+    <div>
+        <div class="section-number">
+            01 — A empresa
+        </div>
+    </div>
+
+    <div>
+
+        <h2>
+            Soluções que fazem parte do projeto.
+        </h2>
+
+        <p>
+            A CR Soluções em Esquadrias trabalha com diferentes
+            possibilidades para transformar projetos em ambientes
+            funcionais, sofisticados e bem acabados.
+        </p>
+
+        <p>
+            Do alumínio ao PVC, dos vidros às fachadas e soluções
+            automatizadas, oferecemos alternativas para diferentes
+            necessidades e padrões de projeto.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- SOLUÇÕES -->
+
+<section class="solutions" id="solucoes">
+
+    <div class="solutions-top">
+
+        <h2>
+            Soluções
+        </h2>
+
+        <p class="solutions-intro">
+            Uma linha completa de produtos e soluções para projetos
+            residenciais e comerciais.
+        </p>
+
+    </div>
+
+
+    <div class="solution-list">
+
+        <div class="solution">
+
+            <div class="solution-number">01</div>
+
+            <h3>Esquadrias</h3>
+
+            <p>
+                Alumínio, desde linhas de entrada até opções de
+                alto padrão, esquadrias em PVC e modelos automatizados.
+            </p>
+
+        </div>
+
+
+        <div class="solution">
+
+            <div class="solution-number">02</div>
+
+            <h3>Vidros & espelhos</h3>
+
+            <p>
+                Linha temperado, popularmente conhecida como Blindex,
+                além de espelhos em diferentes modelos, inclusive
+                opções com LED e Touch.
+            </p>
+
+        </div>
+
+
+        <div class="solution">
+
+            <div class="solution-number">03</div>
+
+            <h3>Coberturas</h3>
+
+            <p>
+                Telhados em vidro e policarbonato, incluindo soluções
+                com abertura automatizada.
+            </p>
+
+        </div>
+
+
+        <div class="solution">
+
+            <div class="solution-number">04</div>
+
+            <h3>Fachadas</h3>
+
+            <p>
+                Portas e fachadas em ACM, fachadas em pele de vidro
+                e soluções para diferentes estilos arquitetônicos.
+            </p>
+
+        </div>
+
+
+        <div class="solution">
+
+            <div class="solution-number">05</div>
+
+            <h3>Elementos arquitetônicos</h3>
+
+            <p>
+                Brises, muxarabi e painéis ripados em alumínio e PVC,
+                agregando personalidade e acabamento ao projeto.
+            </p>
+
+        </div>
+
+
+        <div class="solution">
+
+            <div class="solution-number">06</div>
+
+            <h3>Telas mosquiteiro</h3>
+
+            <p>
+                Modelos recolhíveis para maior praticidade,
+                ventilação e proteção dos ambientes.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PROJETOS -->
+
+<section class="projects" id="projetos">
+
+    <div class="projects-header">
+
+        <h2>
+            Projetos
+        </h2>
+
+        <p>
+            Uma seleção de trabalhos realizados pela CR Soluções
+            em Esquadrias.
+        </p>
+
+    </div>
+
+
+    <div class="gallery">
+
+        <div class="gallery-item">
+            <img src="foto1.jpg" alt="Projeto CR 01">
+            <div class="gallery-overlay">
+                <span>Projeto 01</span>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="foto2.jpg" alt="Projeto CR 02">
+            <div class="gallery-overlay">
+                <span>Projeto 02</span>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="foto3.jpg" alt="Projeto CR 03">
+            <div class="gallery-overlay">
+                <span>Projeto 03</span>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="foto4.jpg" alt="Projeto CR 04">
+            <div class="gallery-overlay">
+                <span>Projeto 04</span>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="foto5.jpg" alt="Projeto CR 05">
+            <div class="gallery-overlay">
+                <span>Projeto 05</span>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="foto6.jpg" alt="Projeto CR 06">
+            <div class="gallery-overlay">
+                <span>Projeto 06</span>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="foto7.jpg" alt="Projeto CR 07">
+            <div class="gallery-overlay">
+                <span>Projeto 07</span>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="foto8.jpg" alt="Projeto CR 08">
+            <div class="gallery-overlay">
+                <span>Projeto 08</span>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="foto9.jpg" alt="Projeto CR 09">
+            <div class="gallery-overlay">
+                <span>Projeto 09</span>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="foto10.jpg" alt="Projeto CR 10">
+            <div class="gallery-overlay">
+                <span>Projeto 10</span>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="foto11.jpg" alt="Projeto CR 11">
+            <div class="gallery-overlay">
+                <span>Projeto 11</span>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="foto12.jpg" alt="Projeto CR 12">
+            <div class="gallery-overlay">
+                <span>Projeto 12</span>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="foto13.jpg" alt="Projeto CR 13">
+            <div class="gallery-overlay">
+                <span>Projeto 13</span>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="foto14.jpg" alt="Projeto CR 14">
+            <div class="gallery-overlay">
+                <span>Projeto 14</span>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="foto15.jpg" alt="Projeto CR 15">
+            <div class="gallery-overlay">
+                <span>Projeto 15</span>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="foto16.jpg" alt="Projeto CR 16">
+            <div class="gallery-overlay">
+                <span>Projeto 16</span>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="foto17.jpg" alt="Projeto CR 17">
+            <div class="gallery-overlay">
+                <span>Projeto 17</span>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- DESTAQUE -->
+
+<section class="detail">
+
+    <div class="detail-image">
+
+        <img
+            src="foto8.jpg"
+            alt="Soluções em esquadrias CR"
+        >
+
+    </div>
+
+    <div class="detail-content">
+
+        <small>
+            Tecnologia & conforto
+        </small>
+
+        <h2>
+            Tecnologia que acompanha o projeto.
+        </h2>
+
+        <p>
+            Esquadrias automatizadas e coberturas com abertura
+            automatizada unem praticidade, conforto e design,
+            trazendo novas possibilidades para ambientes
+            residenciais e comerciais.
+        </p>
+
+        <a
+            href="https://wa.me/5515997498555?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20as%20soluções%20da%20CR."
+            target="_blank"
+            class="btn btn-dark"
+            style="margin-top:35px;width:max-content;"
+        >
+            Falar com a CR
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- CONTATO -->
+
+<section class="contact" id="contato">
+
+    <div class="contact-grid">
+
+        <div>
+
+            <h2>
+                Vamos conversar
+                sobre seu projeto?
+            </h2>
+
+            <p class="contact-text">
+                Entre em contato com a CR Soluções em Esquadrias
+                e solicite um orçamento.
+            </p>
+
+        </div>
+
+
+        <div class="contact-info">
+
+            <div class="contact-item">
+
+                <small>WhatsApp</small>
+
+                <a
+                    href="https://wa.me/5515997498555"
+                    target="_blank"
+                >
+                    (15) 99749-8555
+                </a>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <small>Instagram</small>
+
+                <a
+                    href="https://instagram.com/cr.soluçõesemesquadrias"
+                    target="_blank"
+                >
+                    @cr.soluçõesemesquadrias
+                </a>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <small>Endereço</small>
+
+                <span>
+                    Rua Doutor Fernando Costa, 193B<br>
+                    Centro — Itapetininga/SP
+                </span>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <small>Horário</small>
+
+                <span>
+                    Segunda a sexta — 08h às 18h<br>
+                    Sábado — 08h às 13h
+                </span>
+
+            </div>
+
+
+            <a
+                href="https://wa.me/5515997498555?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento."
+                target="_blank"
+                class="whatsapp"
+            >
+                Solicitar orçamento
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+    <span>
+        © 2026 CR Soluções em Esquadrias
+    </span>
+
+    <span>
+        Itapetininga — SP
+    </span>
+
+</footer>
+
+
+<!-- LIGHTBOX -->
+
+<div class="lightbox" id="lightbox">
+
+    <div class="close" onclick="closeLightbox()">×</div>
+
+    <div class="prev" onclick="changeImage(-1)">‹</div>
+
+    <img id="lightboxImage" src="" alt="Projeto">
+
+    <div class="next" onclick="changeImage(1)">›</div>
+
+</div>
+
+
+<script>
+
+const galleryImages = [];
+
+document.querySelectorAll(".gallery-item img").forEach((img,index)=>{
+
+    galleryImages.push(img.src);
+
+    img.parentElement.addEventListener("click",()=>{
+
+        currentImage = index;
+
+        document.getElementById("lightboxImage").src =
+            galleryImages[currentImage];
+
+        document.getElementById("lightbox").classList.add("active");
+
+    });
+
+});
+
+
+let currentImage = 0;
+
+
+function closeLightbox(){
+
+    document.getElementById("lightbox").classList.remove("active");
+
+}
+
+
+function changeImage(direction){
+
+    currentImage += direction;
+
+    if(currentImage < 0){
+        currentImage = galleryImages.length - 1;
+    }
+
+    if(currentImage >= galleryImages.length){
+        currentImage = 0;
+    }
+
+    document.getElementById("lightboxImage").src =
+        galleryImages[currentImage];
+
+}
+
+
+document.addEventListener("keydown",(event)=>{
+
+    if(event.key === "Escape"){
+        closeLightbox();
+    }
+
+    if(event.key === "ArrowRight"){
+        changeImage(1);
+    }
+
+    if(event.key === "ArrowLeft"){
+        changeImage(-1);
+    }
+
+});
+
+
+document.getElementById("lightbox").addEventListener("click",(event)=>{
+
+    if(event.target.id === "lightbox"){
+        closeLightbox();
+    }
+
+});
+
+</script>
+
+</body>
+</html>
+```
 
