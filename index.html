@@ -285,18 +285,18 @@
       position: absolute;
       inset: 0;
       z-index: 2;
-     background:
-  linear-gradient(
-    90deg,
-    #07182d 0%,
-    rgba(7,24,45,.98) 10%,
-    rgba(7,24,45,.90) 20%,
-    rgba(7,24,45,.65) 32%,
-    rgba(7,24,45,.38) 45%,
-    rgba(7,24,45,.16) 60%,
-    rgba(7,24,45,.04) 78%,
-    rgba(7,24,45,0) 100%
-  );
+      background:
+        linear-gradient(
+          90deg,
+          #07182d 0%,
+          rgba(7,24,45,.98) 10%,
+          rgba(7,24,45,.90) 20%,
+          rgba(7,24,45,.65) 32%,
+          rgba(7,24,45,.38) 45%,
+          rgba(7,24,45,.16) 60%,
+          rgba(7,24,45,.04) 78%,
+          rgba(7,24,45,0) 100%
+        );
       pointer-events: none;
     }
 
@@ -432,6 +432,12 @@
       gap: 14px;
     }
 
+    /* GALERIA RECOLHIDA - DESKTOP MOSTRA 8 */
+
+    .gallery.collapsed .gallery-item:nth-child(n+9) {
+      display: none;
+    }
+
     .gallery-item {
       position: relative;
       overflow: hidden;
@@ -448,6 +454,41 @@
 
     .gallery-item:hover img {
       transform: scale(1.045);
+    }
+
+    /* BOTÃO DA GALERIA */
+
+    .gallery-toggle {
+      margin: 32px auto 0;
+      padding: 12px 18px;
+      border: 0;
+      background: transparent;
+      color: var(--navy);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      font-family: "DM Sans", sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: color 0.25s ease;
+    }
+
+    .gallery-toggle:hover {
+      color: var(--navy-3);
+    }
+
+    .gallery-toggle-arrow {
+      font-size: 23px;
+      line-height: 1;
+      transition: transform 0.35s ease;
+    }
+
+    .gallery.expanded + .gallery-toggle .gallery-toggle-arrow {
+      transform: rotate(180deg);
     }
 
     .gallery-item:nth-child(1) {
@@ -959,6 +1000,12 @@
         grid-auto-rows: 210px;
       }
 
+      /* MOBILE RECOLHIDO - MOSTRA 4 */
+
+      .gallery.collapsed .gallery-item:nth-child(n+5) {
+        display: none;
+      }
+
       .gallery-item:nth-child(n) {
         grid-column: span 1;
         grid-row: span 1;
@@ -1090,6 +1137,12 @@
       .gallery {
         grid-template-columns: 1fr;
         grid-auto-rows: 260px;
+      }
+
+      /* CONTINUA MOSTRANDO APENAS 4 NO MOBILE */
+
+      .gallery.collapsed .gallery-item:nth-child(n+5) {
+        display: none;
       }
 
       .gallery-item:nth-child(n) {
@@ -1344,7 +1397,7 @@
         </div>
 
 
-        <div class="gallery">
+        <div class="gallery collapsed">
 
           <div class="gallery-item">
             <img src="foto2.jpg" alt="Projeto CR Soluções em Esquadrias">
@@ -1419,6 +1472,23 @@
           </div>
 
         </div>
+
+        <!-- CONTROLE DA GALERIA -->
+
+        <button
+          class="gallery-toggle"
+          id="galleryToggle"
+          type="button"
+          aria-expanded="false"
+        >
+          <span class="gallery-toggle-text">
+            Ver todos os projetos
+          </span>
+
+          <span class="gallery-toggle-arrow">
+            ↓
+          </span>
+        </button>
 
       </div>
 
@@ -1732,6 +1802,29 @@
 
 
   <script>
+
+    /* =========================
+       GALERIA RECOLHÍVEL
+    ========================== */
+
+    const gallery = document.querySelector(".gallery");
+    const galleryToggle = document.getElementById("galleryToggle");
+    const galleryToggleText = galleryToggle.querySelector(".gallery-toggle-text");
+
+    galleryToggle.addEventListener("click", () => {
+
+      const expanded = gallery.classList.toggle("expanded");
+
+      gallery.classList.toggle("collapsed", !expanded);
+
+      galleryToggle.setAttribute("aria-expanded", expanded);
+
+      galleryToggleText.textContent = expanded
+        ? "Ocultar projetos"
+        : "Ver todos os projetos";
+
+    });
+
 
     /* =========================
        LIGHTBOX DA GALERIA
