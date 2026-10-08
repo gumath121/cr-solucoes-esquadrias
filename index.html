@@ -2,1391 +2,1456 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>CR Soluções em Esquadrias | Itapetininga</title>
+  <title>CR Soluções em Esquadrias | Itapetininga</title>
 
-<meta name="description" content="CR Soluções em Esquadrias. Esquadrias em alumínio e PVC, vidros, automação, fachadas, ACM, brises, muxarabi e soluções arquitetônicas em Itapetininga e região.">
+  <meta name="description" content="CR Soluções em Esquadrias. Esquadrias de alumínio e PVC, vidro, espelhos, telhados, fachadas, brises e soluções especiais em Itapetininga e região.">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<style>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-:root{
-    --black:#111111;
-    --white:#f8f8f6;
-    --gray:#777;
-    --line:#deded9;
-    --accent:#b78b55;
-}
+  <style>
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+    :root {
+      --navy: #07182d;
+      --navy-2: #0b223e;
+      --navy-3: #102f50;
 
-html{
-    scroll-behavior:smooth;
-}
+      --silver: #aeb7c2;
+      --silver-light: #d9dee4;
+      --silver-dark: #737e89;
 
-body{
-    font-family:"DM Sans",sans-serif;
-    background:var(--white);
-    color:var(--black);
-    overflow-x:hidden;
-}
+      --white: #ffffff;
+      --offwhite: #f5f6f7;
+      --text: #17202b;
+      --muted: #69727d;
 
-img{
-    display:block;
-    width:100%;
-}
-
-a{
-    color:inherit;
-    text-decoration:none;
-}
-
-/* ================= HEADER ================= */
-
-header{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:82px;
-    z-index:1000;
-
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-
-    padding:0 5vw;
-
-    background:rgba(248,248,246,.94);
-    backdrop-filter:blur(12px);
-
-    border-bottom:1px solid rgba(0,0,0,.08);
-}
-
-.logo{
-    width:125px;
-}
-
-.logo img{
-    max-height:55px;
-    object-fit:contain;
-}
-
-nav{
-    display:flex;
-    align-items:center;
-    gap:34px;
-}
-
-nav a{
-    font-size:13px;
-    letter-spacing:.04em;
-    text-transform:uppercase;
-    transition:.25s;
-}
-
-nav a:hover{
-    opacity:.5;
-}
-
-.header-button{
-    padding:12px 19px;
-    border:1px solid var(--black);
-    transition:.25s;
-}
-
-.header-button:hover{
-    background:var(--black);
-    color:white;
-}
-
-/* ================= HERO ================= */
-
-.hero{
-    min-height:100vh;
-    padding:82px 5vw 0;
-
-    display:grid;
-    grid-template-columns:1fr 1.45fr;
-    gap:5vw;
-    align-items:stretch;
-}
-
-.hero-copy{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    padding:70px 0;
-}
-
-.eyebrow{
-    font-size:12px;
-    letter-spacing:.18em;
-    text-transform:uppercase;
-    margin-bottom:28px;
-    color:#666;
-}
-
-.hero h1{
-    font-family:"Manrope",sans-serif;
-    font-size:clamp(48px,6vw,92px);
-    line-height:.94;
-    font-weight:500;
-    letter-spacing:-.055em;
-    max-width:650px;
-}
-
-.hero h1 span{
-    display:block;
-    color:#777;
-}
-
-.hero-description{
-    max-width:470px;
-    margin-top:35px;
-    font-size:17px;
-    line-height:1.7;
-    color:#555;
-}
-
-.hero-actions{
-    display:flex;
-    gap:12px;
-    margin-top:42px;
-}
-
-.btn{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-
-    padding:15px 23px;
-
-    font-size:13px;
-    letter-spacing:.03em;
-
-    border:1px solid var(--black);
-
-    transition:.3s;
-}
-
-.btn-dark{
-    background:var(--black);
-    color:white;
-}
-
-.btn-dark:hover{
-    background:transparent;
-    color:var(--black);
-}
-
-.btn-light:hover{
-    background:var(--black);
-    color:white;
-}
-
-.hero-image{
-    position:relative;
-    height:calc(100vh - 82px);
-    min-height:600px;
-    overflow:hidden;
-}
-
-.hero-image img{
-    height:100%;
-    object-fit:cover;
-}
-
-.hero-image::after{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:linear-gradient(
-        90deg,
-        rgba(0,0,0,.04),
-        transparent 50%,
-        rgba(0,0,0,.1)
-    );
-}
-
-/* ================= INTRO ================= */
-
-.intro{
-    padding:150px 10vw;
-    display:grid;
-    grid-template-columns:.8fr 1.2fr;
-    gap:10vw;
-    border-top:1px solid var(--line);
-}
-
-.section-number{
-    font-size:12px;
-    letter-spacing:.12em;
-    color:#888;
-}
-
-.intro h2{
-    font-family:"Manrope",sans-serif;
-    font-weight:500;
-    font-size:clamp(34px,4vw,60px);
-    line-height:1.05;
-    letter-spacing:-.045em;
-    max-width:700px;
-}
-
-.intro p{
-    margin-top:32px;
-    max-width:650px;
-    font-size:17px;
-    line-height:1.8;
-    color:#666;
-}
-
-/* ================= SOLUTIONS ================= */
-
-.solutions{
-    background:#151515;
-    color:white;
-    padding:140px 8vw;
-}
-
-.solutions-top{
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-end;
-    gap:40px;
-    margin-bottom:80px;
-}
-
-.solutions h2{
-    font-family:"Manrope",sans-serif;
-    font-size:clamp(42px,5vw,75px);
-    line-height:.95;
-    font-weight:500;
-    letter-spacing:-.05em;
-}
-
-.solutions-intro{
-    max-width:400px;
-    color:#aaa;
-    line-height:1.7;
-}
-
-.solution-list{
-    border-top:1px solid #3b3b3b;
-}
-
-.solution{
-    display:grid;
-    grid-template-columns:90px 1fr 1fr;
-    align-items:center;
-
-    padding:30px 0;
-
-    border-bottom:1px solid #3b3b3b;
-
-    transition:.3s;
-}
-
-.solution:hover{
-    padding-left:18px;
-}
-
-.solution-number{
-    font-size:13px;
-    color:#777;
-}
-
-.solution h3{
-    font-family:"Manrope",sans-serif;
-    font-size:27px;
-    font-weight:500;
-}
-
-.solution p{
-    color:#999;
-    line-height:1.6;
-    max-width:500px;
-}
-
-/* ================= PROJECTS ================= */
-
-.projects{
-    padding:150px 5vw;
-}
-
-.projects-header{
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-end;
-    margin-bottom:70px;
-}
-
-.projects h2{
-    font-family:"Manrope",sans-serif;
-    font-size:clamp(45px,6vw,90px);
-    line-height:.9;
-    font-weight:500;
-    letter-spacing:-.055em;
-}
-
-.projects-header p{
-    max-width:330px;
-    color:#666;
-    line-height:1.6;
-}
-
-/* GALERIA */
-
-.gallery{
-    display:grid;
-    grid-template-columns:repeat(12,1fr);
-    gap:18px;
-}
-
-.gallery-item{
-    position:relative;
-    overflow:hidden;
-    cursor:pointer;
-    background:#ddd;
-}
-
-.gallery-item:nth-child(1){
-    grid-column:span 7;
-    aspect-ratio:1.35;
-}
-
-.gallery-item:nth-child(2){
-    grid-column:span 5;
-    aspect-ratio:.95;
-}
-
-.gallery-item:nth-child(3){
-    grid-column:span 4;
-    aspect-ratio:1;
-}
-
-.gallery-item:nth-child(4){
-    grid-column:span 8;
-    aspect-ratio:1.6;
-}
-
-.gallery-item:nth-child(5){
-    grid-column:span 5;
-    aspect-ratio:1.15;
-}
-
-.gallery-item:nth-child(6){
-    grid-column:span 7;
-    aspect-ratio:1.4;
-}
-
-.gallery-item:nth-child(n+7){
-    grid-column:span 4;
-    aspect-ratio:1;
-}
-
-.gallery-item img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    transition:transform .8s cubic-bezier(.2,.7,.2,1);
-}
-
-.gallery-item:hover img{
-    transform:scale(1.045);
-}
-
-.gallery-overlay{
-    position:absolute;
-    inset:0;
-
-    display:flex;
-    align-items:flex-end;
-
-    padding:25px;
-
-    background:linear-gradient(
-        transparent 55%,
-        rgba(0,0,0,.65)
-    );
-
-    opacity:0;
-    transition:.35s;
-}
-
-.gallery-item:hover .gallery-overlay{
-    opacity:1;
-}
-
-.gallery-overlay span{
-    color:white;
-    font-size:12px;
-    letter-spacing:.1em;
-    text-transform:uppercase;
-}
-
-/* ================= DETAIL ================= */
-
-.detail{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    min-height:600px;
-    background:#e9e9e5;
-}
-
-.detail-image{
-    overflow:hidden;
-}
-
-.detail-image img{
-    height:100%;
-    object-fit:cover;
-}
-
-.detail-content{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    padding:10vw;
-}
-
-.detail-content small{
-    text-transform:uppercase;
-    letter-spacing:.15em;
-    font-size:11px;
-    color:#777;
-}
-
-.detail-content h2{
-    font-family:"Manrope",sans-serif;
-    font-size:clamp(38px,4vw,65px);
-    font-weight:500;
-    line-height:1;
-    letter-spacing:-.05em;
-    margin:25px 0;
-}
-
-.detail-content p{
-    max-width:500px;
-    color:#666;
-    line-height:1.8;
-}
-
-/* ================= CONTACT ================= */
-
-.contact{
-    background:#111;
-    color:white;
-    padding:140px 8vw;
-}
-
-.contact-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:10vw;
-}
-
-.contact h2{
-    font-family:"Manrope",sans-serif;
-    font-size:clamp(50px,6vw,95px);
-    line-height:.9;
-    font-weight:500;
-    letter-spacing:-.06em;
-}
-
-.contact-text{
-    margin-top:35px;
-    color:#999;
-    max-width:430px;
-    line-height:1.7;
-}
-
-.contact-info{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-}
-
-.contact-item{
-    padding:25px 0;
-    border-bottom:1px solid #333;
-}
-
-.contact-item small{
-    display:block;
-    color:#777;
-    text-transform:uppercase;
-    letter-spacing:.1em;
-    font-size:10px;
-    margin-bottom:8px;
-}
-
-.contact-item a,
-.contact-item span{
-    font-size:18px;
-}
-
-.whatsapp{
-    margin-top:35px;
-    display:inline-flex;
-    width:max-content;
-    padding:16px 25px;
-    background:white;
-    color:#111;
-    transition:.3s;
-}
-
-.whatsapp:hover{
-    background:#d8d8d8;
-}
-
-/* ================= FOOTER ================= */
-
-footer{
-    background:#111;
-    color:#777;
-    border-top:1px solid #292929;
-    padding:30px 8vw;
-
-    display:flex;
-    justify-content:space-between;
-
-    font-size:11px;
-    text-transform:uppercase;
-    letter-spacing:.08em;
-}
-
-/* ================= LIGHTBOX ================= */
-
-.lightbox{
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,.96);
-    z-index:2000;
-
-    display:none;
-    align-items:center;
-    justify-content:center;
-
-    padding:40px;
-}
-
-.lightbox.active{
-    display:flex;
-}
-
-.lightbox img{
-    max-width:92vw;
-    max-height:88vh;
-    width:auto;
-    object-fit:contain;
-}
-
-.close{
-    position:absolute;
-    top:25px;
-    right:30px;
-
-    color:white;
-    font-size:35px;
-    cursor:pointer;
-    font-weight:300;
-}
-
-.prev,
-.next{
-    position:absolute;
-    top:50%;
-    transform:translateY(-50%);
-
-    color:white;
-    font-size:38px;
-    cursor:pointer;
-
-    padding:20px;
-}
-
-.prev{
-    left:15px;
-}
-
-.next{
-    right:15px;
-}
-
-/* ================= MOBILE ================= */
-
-@media(max-width:850px){
-
-    header{
-        height:70px;
-        padding:0 20px;
+      --border: rgba(7, 24, 45, .12);
+      --max: 1280px;
     }
 
-    .logo{
-        width:100px;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    nav{
-        display:none;
+    html {
+      scroll-behavior: smooth;
     }
 
-    .hero{
-        display:flex;
-        flex-direction:column;
-        padding:70px 20px 0;
-        gap:0;
+    body {
+      font-family: "DM Sans", sans-serif;
+      color: var(--text);
+      background: var(--white);
+      overflow-x: hidden;
     }
 
-    .hero-copy{
-        padding:80px 0 55px;
+    img {
+      max-width: 100%;
+      display: block;
     }
 
-    .hero h1{
-        font-size:54px;
+    a {
+      color: inherit;
+      text-decoration: none;
     }
 
-    .hero-description{
-        font-size:15px;
+    .container {
+      width: min(var(--max), calc(100% - 48px));
+      margin: auto;
     }
 
-    .hero-image{
-        height:65vh;
-        min-height:400px;
+    /* =========================
+       HEADER
+    ========================= */
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 92px;
+      background: rgba(7, 24, 45, .97);
+      backdrop-filter: blur(12px);
+      z-index: 1000;
+      border-bottom: 1px solid rgba(255,255,255,.08);
     }
 
-    .intro{
-        display:block;
-        padding:90px 25px;
+    .nav {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
     }
 
-    .intro h2{
-        margin-top:25px;
+    /* LOGO MAIOR */
+
+    .logo {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      flex-shrink: 0;
     }
 
-    .solutions{
-        padding:90px 25px;
+    .logo img {
+      width: 185px;
+      max-height: 72px;
+      object-fit: contain;
     }
 
-    .solutions-top{
-        display:block;
-        margin-bottom:55px;
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 34px;
     }
 
-    .solutions-intro{
-        margin-top:25px;
+    nav a {
+      color: rgba(255,255,255,.82);
+      font-size: 14px;
+      font-weight: 500;
+      transition: .25s ease;
     }
 
-    .solution{
-        grid-template-columns:45px 1fr;
-        gap:10px;
+    nav a:hover {
+      color: white;
     }
 
-    .solution p{
-        grid-column:2;
-        margin-top:-4px;
+    .nav-button {
+      padding: 13px 22px;
+      border: 1px solid rgba(255,255,255,.35);
+      color: white;
+      font-weight: 600;
+      transition: .25s ease;
     }
 
-    .projects{
-        padding:90px 20px;
+    .nav-button:hover {
+      background: white;
+      color: var(--navy);
     }
 
-    .projects-header{
-        display:block;
-        margin-bottom:45px;
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: 100vh;
+      padding-top: 92px;
+      background:
+        linear-gradient(
+          120deg,
+          var(--navy) 0%,
+          var(--navy-2) 55%,
+          var(--navy-3) 100%
+        );
+      color: white;
+      position: relative;
+      overflow: hidden;
     }
 
-    .projects-header p{
-        margin-top:25px;
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      border: 1px solid rgba(174,183,194,.12);
+      border-radius: 50%;
+      right: -180px;
+      top: 80px;
     }
 
-    .gallery{
-        grid-template-columns:1fr 1fr;
-        gap:8px;
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      border: 1px solid rgba(174,183,194,.08);
+      border-radius: 50%;
+      right: -90px;
+      top: 170px;
     }
 
-    .gallery-item,
-    .gallery-item:nth-child(n){
-        grid-column:span 1;
-        aspect-ratio:.9;
+    .hero-content {
+      min-height: calc(100vh - 92px);
+      display: grid;
+      grid-template-columns: 1fr 470px;
+      align-items: center;
+      gap: 80px;
+      position: relative;
+      z-index: 2;
     }
 
-    .gallery-item:nth-child(1),
-    .gallery-item:nth-child(4),
-    .gallery-item:nth-child(6){
-        grid-column:span 2;
-        aspect-ratio:1.25;
+    .hero-text {
+      max-width: 650px;
     }
 
-    .gallery-overlay{
-        opacity:1;
-        padding:12px;
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .18em;
+      color: var(--silver-light);
+      margin-bottom: 24px;
+      font-weight: 600;
     }
 
-    .gallery-overlay span{
-        font-size:9px;
+    .eyebrow::before {
+      content: "";
+      width: 34px;
+      height: 1px;
+      background: var(--silver);
     }
 
-    .detail{
-        display:block;
+    .hero h1 {
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(44px, 5vw, 76px);
+      line-height: 1.02;
+      letter-spacing: -.045em;
+      margin-bottom: 28px;
+      font-weight: 800;
     }
 
-    .detail-image{
-        height:55vh;
+    .hero h1 span {
+      color: var(--silver-light);
     }
 
-    .detail-content{
-        padding:80px 25px;
+    .hero p {
+      font-size: 18px;
+      line-height: 1.7;
+      color: rgba(255,255,255,.72);
+      max-width: 570px;
+      margin-bottom: 38px;
     }
 
-    .contact{
-        padding:90px 25px;
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
     }
 
-    .contact-grid{
-        display:block;
+    .btn-primary {
+      background: white;
+      color: var(--navy);
+      padding: 16px 25px;
+      font-weight: 700;
+      transition: .25s ease;
     }
 
-    .contact-info{
-        margin-top:60px;
+    .btn-primary:hover {
+      background: var(--silver-light);
     }
 
-    footer{
-        padding:25px;
-        display:block;
-        line-height:2;
+    .btn-secondary {
+      border: 1px solid rgba(255,255,255,.3);
+      padding: 15px 24px;
+      color: white;
+      transition: .25s ease;
     }
 
-    .lightbox{
-        padding:15px;
+    .btn-secondary:hover {
+      border-color: white;
     }
 
-    .prev,
-    .next{
-        font-size:28px;
+    .hero-image {
+      height: 560px;
+      position: relative;
     }
 
-}
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-</style>
+    .hero-image::after {
+      content: "";
+      position: absolute;
+      inset: 14px;
+      border: 1px solid rgba(255,255,255,.25);
+      pointer-events: none;
+    }
+
+    /* =========================
+       INTRO
+    ========================= */
+
+    .intro {
+      padding: 120px 0;
+      background: var(--offwhite);
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 100px;
+      align-items: start;
+    }
+
+    .section-label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .18em;
+      color: var(--silver-dark);
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .intro h2 {
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(34px, 4vw, 55px);
+      line-height: 1.08;
+      letter-spacing: -.04em;
+    }
+
+    .intro-text {
+      font-size: 18px;
+      line-height: 1.8;
+      color: var(--muted);
+      max-width: 650px;
+    }
+
+    /* =========================
+       SOLUÇÕES
+    ========================= */
+
+    .solutions {
+      padding: 120px 0;
+      background: var(--navy);
+      color: white;
+    }
+
+    .solutions-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 40px;
+      margin-bottom: 65px;
+    }
+
+    .solutions h2 {
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(38px, 4vw, 58px);
+      letter-spacing: -.04em;
+    }
+
+    .solutions-head p {
+      color: rgba(255,255,255,.62);
+      max-width: 430px;
+      line-height: 1.7;
+    }
+
+    .solutions-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid rgba(255,255,255,.15);
+      border-left: 1px solid rgba(255,255,255,.15);
+    }
+
+    .solution {
+      padding: 38px 32px;
+      min-height: 190px;
+      border-right: 1px solid rgba(255,255,255,.15);
+      border-bottom: 1px solid rgba(255,255,255,.15);
+      transition: .3s ease;
+    }
+
+    .solution:hover {
+      background: var(--navy-2);
+    }
+
+    .solution-number {
+      font-size: 12px;
+      color: var(--silver);
+      margin-bottom: 45px;
+      letter-spacing: .1em;
+    }
+
+    .solution h3 {
+      font-family: "Manrope", sans-serif;
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+
+    .solution p {
+      font-size: 14px;
+      line-height: 1.6;
+      color: rgba(255,255,255,.58);
+    }
+
+    /* =========================
+       GALERIA
+    ========================= */
+
+    .projects {
+      padding: 120px 0;
+      background: white;
+    }
+
+    .projects-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 30px;
+      margin-bottom: 55px;
+    }
+
+    .projects h2 {
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(38px, 4vw, 58px);
+      letter-spacing: -.04em;
+    }
+
+    .projects-head p {
+      max-width: 450px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 14px;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      background: #e9ecef;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .6s cubic-bezier(.2,.7,.2,1);
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.045);
+    }
+
+    .gallery-item:nth-child(1) {
+      grid-column: span 7;
+      height: 510px;
+    }
+
+    .gallery-item:nth-child(2) {
+      grid-column: span 5;
+      height: 510px;
+    }
+
+    .gallery-item:nth-child(3) {
+      grid-column: span 4;
+      height: 360px;
+    }
+
+    .gallery-item:nth-child(4) {
+      grid-column: span 4;
+      height: 360px;
+    }
+
+    .gallery-item:nth-child(5) {
+      grid-column: span 4;
+      height: 360px;
+    }
+
+    .gallery-item:nth-child(n+6) {
+      grid-column: span 3;
+      height: 290px;
+    }
+
+    /* =========================
+       DETALHE
+    ========================= */
+
+    .feature {
+      background: var(--offwhite);
+      padding: 120px 0;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      align-items: center;
+      gap: 90px;
+    }
+
+    .feature-image {
+      height: 570px;
+      overflow: hidden;
+    }
+
+    .feature-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .feature-content h2 {
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(38px, 4vw, 58px);
+      line-height: 1.08;
+      letter-spacing: -.04em;
+      margin-bottom: 25px;
+    }
+
+    .feature-content p {
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.8;
+      margin-bottom: 30px;
+    }
+
+    .feature-line {
+      width: 70px;
+      height: 2px;
+      background: var(--navy);
+      margin-bottom: 30px;
+    }
+
+    /* =========================
+       CONTATO
+    ========================= */
+
+    .contact {
+      padding: 120px 0;
+      background: var(--navy-2);
+      color: white;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 100px;
+    }
+
+    .contact h2 {
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(40px, 5vw, 65px);
+      line-height: 1.05;
+      letter-spacing: -.045em;
+      margin-bottom: 25px;
+    }
+
+    .contact-intro {
+      color: rgba(255,255,255,.62);
+      font-size: 17px;
+      line-height: 1.8;
+      max-width: 550px;
+    }
+
+    .contact-info {
+      border-top: 1px solid rgba(255,255,255,.16);
+    }
+
+    .contact-row {
+      padding: 23px 0;
+      border-bottom: 1px solid rgba(255,255,255,.16);
+      display: grid;
+      grid-template-columns: 110px 1fr;
+      gap: 20px;
+    }
+
+    .contact-row strong {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      color: var(--silver);
+    }
+
+    .contact-row span,
+    .contact-row a {
+      color: rgba(255,255,255,.82);
+      line-height: 1.6;
+    }
+
+    .contact-row a:hover {
+      color: white;
+    }
+
+    .contact-button {
+      display: inline-flex;
+      margin-top: 35px;
+      padding: 16px 26px;
+      background: white;
+      color: var(--navy);
+      font-weight: 700;
+      transition: .25s ease;
+    }
+
+    .contact-button:hover {
+      background: var(--silver-light);
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background: #04101f;
+      color: rgba(255,255,255,.5);
+      padding: 30px 0;
+      font-size: 13px;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: center;
+    }
+
+    /* =========================
+       LIGHTBOX
+    ========================= */
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(2,8,17,.96);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 3000;
+      padding: 30px;
+    }
+
+    .lightbox.active {
+      display: flex;
+    }
+
+    .lightbox img {
+      max-width: 92vw;
+      max-height: 88vh;
+      object-fit: contain;
+    }
+
+    .lightbox-close,
+    .lightbox-prev,
+    .lightbox-next {
+      position: absolute;
+      border: 0;
+      background: transparent;
+      color: white;
+      cursor: pointer;
+      font-size: 32px;
+      line-height: 1;
+    }
+
+    .lightbox-close {
+      top: 25px;
+      right: 30px;
+      font-size: 38px;
+    }
+
+    .lightbox-prev {
+      left: 25px;
+    }
+
+    .lightbox-next {
+      right: 25px;
+    }
+
+    /* =========================
+       RESPONSIVO
+    ========================= */
+
+    @media (max-width: 900px) {
+
+      header {
+        height: 78px;
+      }
+
+      .logo img {
+        width: 155px;
+        max-height: 60px;
+      }
+
+      nav {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 78px;
+      }
+
+      .hero-content {
+        min-height: auto;
+        grid-template-columns: 1fr;
+        gap: 45px;
+        padding-top: 80px;
+        padding-bottom: 70px;
+      }
+
+      .hero-image {
+        height: 400px;
+      }
+
+      .intro-grid,
+      .feature-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 55px;
+      }
+
+      .solutions-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .solutions-head,
+      .projects-head {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .gallery-item:nth-child(n) {
+        grid-column: span 6;
+        height: 320px;
+      }
+
+      .gallery-item:nth-child(1),
+      .gallery-item:nth-child(2) {
+        height: 420px;
+      }
+
+      .feature-image {
+        height: 450px;
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      .container {
+        width: min(var(--max), calc(100% - 30px));
+      }
+
+      header {
+        height: 70px;
+      }
+
+      .logo img {
+        width: 140px;
+        max-height: 52px;
+      }
+
+      .hero {
+        padding-top: 70px;
+      }
+
+      .hero-content {
+        padding-top: 65px;
+      }
+
+      .hero h1 {
+        font-size: 43px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .hero-image {
+        height: 330px;
+      }
+
+      .intro,
+      .solutions,
+      .projects,
+      .feature,
+      .contact {
+        padding: 80px 0;
+      }
+
+      .solutions-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .solution {
+        min-height: auto;
+      }
+
+      .solution-number {
+        margin-bottom: 25px;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-item:nth-child(n) {
+        grid-column: span 1;
+        height: 300px;
+      }
+
+      .gallery-item:nth-child(1),
+      .gallery-item:nth-child(2) {
+        height: 340px;
+      }
+
+      .feature-image {
+        height: 350px;
+      }
+
+      .contact-row {
+        grid-template-columns: 1fr;
+        gap: 7px;
+      }
+
+      .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .lightbox {
+        padding: 15px;
+      }
+
+      .lightbox img {
+        max-width: 95vw;
+        max-height: 80vh;
+      }
+
+      .lightbox-prev {
+        left: 10px;
+      }
+
+      .lightbox-next {
+        right: 10px;
+      }
+    }
+
+  </style>
 </head>
 
 <body>
 
-<header>
+  <!-- =========================
+       HEADER
+  ========================= -->
 
-    <a href="#" class="logo">
+  <header>
+    <div class="container nav">
+
+      <a href="#inicio" class="logo">
         <img src="logo.png" alt="CR Soluções em Esquadrias">
-    </a>
+      </a>
 
-    <nav>
+      <nav>
+        <a href="#inicio">Início</a>
         <a href="#solucoes">Soluções</a>
         <a href="#projetos">Projetos</a>
-        <a href="#empresa">A empresa</a>
         <a href="#contato">Contato</a>
 
         <a
-            href="https://wa.me/5515997498555?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento."
-            target="_blank"
-            class="header-button"
+          href="https://wa.me/5515997498555?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento."
+          class="nav-button"
+          target="_blank"
         >
-            Orçamento
+          Orçamento
         </a>
-    </nav>
+      </nav>
 
-</header>
+    </div>
+  </header>
 
 
-<main>
+  <!-- =========================
+       HERO
+  ========================= -->
 
-<!-- HERO -->
+  <main>
 
-<section class="hero">
+    <section class="hero" id="inicio">
 
-    <div class="hero-copy">
+      <div class="container hero-content">
 
-        <div class="eyebrow">
-            CR Soluções em Esquadrias
-        </div>
+        <div class="hero-text">
 
-        <h1>
-            Projetos que
-            <span>valorizam espaços.</span>
-        </h1>
+          <div class="eyebrow">
+            Soluções em esquadrias
+          </div>
 
-        <p class="hero-description">
-            Esquadrias, vidros, fachadas e soluções arquitetônicas
-            para projetos residenciais e comerciais.
-        </p>
+          <h1>
+            Projetos que unem
+            <span>design, precisão</span>
+            e acabamento.
+          </h1>
 
-        <div class="hero-actions">
+          <p>
+            Esquadrias, vidros, fachadas e soluções especiais
+            desenvolvidas para valorizar cada projeto,
+            com qualidade e atenção aos detalhes.
+          </p>
+
+          <div class="hero-actions">
 
             <a
-                href="https://wa.me/5515997498555?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento."
-                target="_blank"
-                class="btn btn-dark"
+              href="https://wa.me/5515997498555?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento."
+              target="_blank"
+              class="btn-primary"
             >
-                Solicitar orçamento
+              Solicitar orçamento
             </a>
 
-            <a href="#projetos" class="btn btn-light">
-                Ver projetos
+            <a href="#projetos" class="btn-secondary">
+              Ver projetos
             </a>
+
+          </div>
 
         </div>
 
-    </div>
-
-    <div class="hero-image">
-
-        <img
-            src="foto1.jpg"
-            alt="Projeto realizado pela CR Soluções em Esquadrias"
-        >
-
-    </div>
-
-</section>
-
-
-<!-- INTRO -->
-
-<section class="intro" id="empresa">
-
-    <div>
-        <div class="section-number">
-            01 — A empresa
+        <div class="hero-image">
+          <img src="foto2.jpg" alt="Projeto realizado pela CR Soluções em Esquadrias">
         </div>
-    </div>
 
-    <div>
+      </div>
 
-        <h2>
+    </section>
+
+
+    <!-- =========================
+         INTRO
+    ========================= -->
+
+    <section class="intro">
+
+      <div class="container intro-grid">
+
+        <div>
+          <div class="section-label">
+            CR Soluções em Esquadrias
+          </div>
+
+          <h2>
             Soluções que fazem parte do projeto.
-        </h2>
+          </h2>
+        </div>
 
-        <p>
-            A CR Soluções em Esquadrias trabalha com diferentes
-            possibilidades para transformar projetos em ambientes
-            funcionais, sofisticados e bem acabados.
-        </p>
+        <div class="intro-text">
 
-        <p>
-            Do alumínio ao PVC, dos vidros às fachadas e soluções
-            automatizadas, oferecemos alternativas para diferentes
-            necessidades e padrões de projeto.
-        </p>
+          <p>
+            Trabalhamos com diferentes sistemas e acabamentos
+            para transformar projetos residenciais e comerciais
+            em ambientes mais funcionais, modernos e sofisticados.
+          </p>
 
-    </div>
+          <br>
 
-</section>
+          <p>
+            Do alumínio ao PVC, do vidro às soluções automatizadas,
+            cada instalação é pensada para entregar estética,
+            desempenho e acabamento.
+          </p>
 
+        </div>
 
-<!-- SOLUÇÕES -->
+      </div>
 
-<section class="solutions" id="solucoes">
-
-    <div class="solutions-top">
-
-        <h2>
-            Soluções
-        </h2>
-
-        <p class="solutions-intro">
-            Uma linha completa de produtos e soluções para projetos
-            residenciais e comerciais.
-        </p>
-
-    </div>
+    </section>
 
 
-    <div class="solution-list">
+    <!-- =========================
+         SOLUÇÕES
+    ========================= -->
 
-        <div class="solution">
+    <section class="solutions" id="solucoes">
 
+      <div class="container">
+
+        <div class="solutions-head">
+
+          <div>
+            <div class="section-label" style="color:#aeb7c2;">
+              O que fazemos
+            </div>
+
+            <h2>
+              Soluções completas
+            </h2>
+          </div>
+
+          <p>
+            Uma linha completa de produtos e serviços para
+            projetos residenciais, comerciais e arquitetônicos.
+          </p>
+
+        </div>
+
+
+        <div class="solutions-grid">
+
+          <div class="solution">
             <div class="solution-number">01</div>
-
             <h3>Esquadrias</h3>
-
             <p>
-                Alumínio, desde linhas de entrada até opções de
-                alto padrão, esquadrias em PVC e modelos automatizados.
+              Esquadrias em alumínio, desde linhas de entrada
+              até opções de alto padrão.
             </p>
+          </div>
 
-        </div>
-
-
-        <div class="solution">
-
+          <div class="solution">
             <div class="solution-number">02</div>
-
-            <h3>Vidros & espelhos</h3>
-
+            <h3>PVC & Automatizadas</h3>
             <p>
-                Linha temperado, popularmente conhecida como Blindex,
-                além de espelhos em diferentes modelos, inclusive
-                opções com LED e Touch.
+              Sistemas em PVC e soluções automatizadas
+              para diferentes necessidades.
             </p>
+          </div>
 
-        </div>
-
-
-        <div class="solution">
-
+          <div class="solution">
             <div class="solution-number">03</div>
-
-            <h3>Coberturas</h3>
-
+            <h3>Vidros & Espelhos</h3>
             <p>
-                Telhados em vidro e policarbonato, incluindo soluções
-                com abertura automatizada.
+              Espelhos convencionais, LED, touch e
+              soluções em vidro temperado.
             </p>
+          </div>
 
-        </div>
-
-
-        <div class="solution">
-
+          <div class="solution">
             <div class="solution-number">04</div>
-
-            <h3>Fachadas</h3>
-
+            <h3>Coberturas</h3>
             <p>
-                Portas e fachadas em ACM, fachadas em pele de vidro
-                e soluções para diferentes estilos arquitetônicos.
+              Telhados em vidro e policarbonato,
+              inclusive com abertura automatizada.
             </p>
+          </div>
 
-        </div>
-
-
-        <div class="solution">
-
+          <div class="solution">
             <div class="solution-number">05</div>
-
-            <h3>Elementos arquitetônicos</h3>
-
+            <h3>Fachadas</h3>
             <p>
-                Brises, muxarabi e painéis ripados em alumínio e PVC,
-                agregando personalidade e acabamento ao projeto.
+              ACM, pele de vidro e outras soluções
+              para fachadas contemporâneas.
             </p>
+          </div>
 
-        </div>
-
-
-        <div class="solution">
-
+          <div class="solution">
             <div class="solution-number">06</div>
-
-            <h3>Telas mosquiteiro</h3>
-
+            <h3>Detalhes Arquitetônicos</h3>
             <p>
-                Modelos recolhíveis para maior praticidade,
-                ventilação e proteção dos ambientes.
+              Brises, muxarabi, painéis ripados e
+              telas mosquiteiro recolhíveis.
             </p>
+          </div>
 
         </div>
 
-    </div>
+      </div>
 
-</section>
-
-
-<!-- PROJETOS -->
-
-<section class="projects" id="projetos">
-
-    <div class="projects-header">
-
-        <h2>
-            Projetos
-        </h2>
-
-        <p>
-            Uma seleção de trabalhos realizados pela CR Soluções
-            em Esquadrias.
-        </p>
-
-    </div>
+    </section>
 
 
-    <div class="gallery">
+    <!-- =========================
+         PROJETOS
+    ========================= -->
 
-        <div class="gallery-item">
-            <img src="foto1.jpg" alt="Projeto CR 01">
-            <div class="gallery-overlay">
-                <span>Projeto 01</span>
+    <section class="projects" id="projetos">
+
+      <div class="container">
+
+        <div class="projects-head">
+
+          <div>
+            <div class="section-label">
+              Portfólio
             </div>
+
+            <h2>
+              Projetos realizados
+            </h2>
+          </div>
+
+          <p>
+            Uma seleção de trabalhos realizados pela
+            CR Soluções em Esquadrias.
+          </p>
+
         </div>
 
-        <div class="gallery-item">
-            <img src="foto2.jpg" alt="Projeto CR 02">
-            <div class="gallery-overlay">
-                <span>Projeto 02</span>
-            </div>
+
+        <div class="gallery">
+
+          <div class="gallery-item">
+            <img src="foto2.jpg" alt="Projeto de esquadria" loading="lazy">
+          </div>
+
+          <div class="gallery-item">
+            <img src="foto3.jpg" alt="Projeto de esquadria" loading="lazy">
+          </div>
+
+          <div class="gallery-item">
+            <img src="foto5.jpg" alt="Projeto realizado" loading="lazy">
+          </div>
+
+          <div class="gallery-item">
+            <img src="foto6.jpg" alt="Projeto realizado" loading="lazy">
+          </div>
+
+          <div class="gallery-item">
+            <img src="foto7.jpg" alt="Projeto realizado" loading="lazy">
+          </div>
+
+          <div class="gallery-item">
+            <img src="foto8.jpg" alt="Projeto realizado" loading="lazy">
+          </div>
+
+          <div class="gallery-item">
+            <img src="foto9.jpg" alt="Projeto realizado" loading="lazy">
+          </div>
+
+          <div class="gallery-item">
+            <img src="foto10.jpg" alt="Projeto realizado" loading="lazy">
+          </div>
+
+          <div class="gallery-item">
+            <img src="foto11.jpg" alt="Projeto realizado" loading="lazy">
+          </div>
+
+          <div class="gallery-item">
+            <img src="foto12.jpg" alt="Projeto realizado" loading="lazy">
+          </div>
+
+          <div class="gallery-item">
+            <img src="foto13.jpg" alt="Projeto realizado" loading="lazy">
+          </div>
+
+          <div class="gallery-item">
+            <img src="foto14.jpg" alt="Projeto realizado" loading="lazy">
+          </div>
+
+          <div class="gallery-item">
+            <img src="foto15.jpg" alt="Projeto realizado" loading="lazy">
+          </div>
+
+          <div class="gallery-item">
+            <img src="foto16.jpg" alt="Projeto realizado" loading="lazy">
+          </div>
+
+          <div class="gallery-item">
+            <img src="foto17.jpg" alt="Projeto realizado" loading="lazy">
+          </div>
+
+          <div class="gallery-item">
+            <img src="foto18.jpg" alt="Projeto realizado" loading="lazy">
+          </div>
+
+          <div class="gallery-item">
+            <img src="foto19.jpg" alt="Projeto realizado" loading="lazy">
+          </div>
+
+          <div class="gallery-item">
+            <img src="foto20.jpg" alt="Projeto realizado" loading="lazy">
+          </div>
+
         </div>
 
-        <div class="gallery-item">
-            <img src="foto3.jpg" alt="Projeto CR 03">
-            <div class="gallery-overlay">
-                <span>Projeto 03</span>
-            </div>
-        </div>
+      </div>
 
-        <div class="gallery-item">
-            <img src="foto4.jpg" alt="Projeto CR 04">
-            <div class="gallery-overlay">
-                <span>Projeto 04</span>
-            </div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="foto5.jpg" alt="Projeto CR 05">
-            <div class="gallery-overlay">
-                <span>Projeto 05</span>
-            </div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="foto6.jpg" alt="Projeto CR 06">
-            <div class="gallery-overlay">
-                <span>Projeto 06</span>
-            </div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="foto7.jpg" alt="Projeto CR 07">
-            <div class="gallery-overlay">
-                <span>Projeto 07</span>
-            </div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="foto8.jpg" alt="Projeto CR 08">
-            <div class="gallery-overlay">
-                <span>Projeto 08</span>
-            </div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="foto9.jpg" alt="Projeto CR 09">
-            <div class="gallery-overlay">
-                <span>Projeto 09</span>
-            </div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="foto10.jpg" alt="Projeto CR 10">
-            <div class="gallery-overlay">
-                <span>Projeto 10</span>
-            </div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="foto11.jpg" alt="Projeto CR 11">
-            <div class="gallery-overlay">
-                <span>Projeto 11</span>
-            </div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="foto12.jpg" alt="Projeto CR 12">
-            <div class="gallery-overlay">
-                <span>Projeto 12</span>
-            </div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="foto13.jpg" alt="Projeto CR 13">
-            <div class="gallery-overlay">
-                <span>Projeto 13</span>
-            </div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="foto14.jpg" alt="Projeto CR 14">
-            <div class="gallery-overlay">
-                <span>Projeto 14</span>
-            </div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="foto15.jpg" alt="Projeto CR 15">
-            <div class="gallery-overlay">
-                <span>Projeto 15</span>
-            </div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="foto16.jpg" alt="Projeto CR 16">
-            <div class="gallery-overlay">
-                <span>Projeto 16</span>
-            </div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="foto17.jpg" alt="Projeto CR 17">
-            <div class="gallery-overlay">
-                <span>Projeto 17</span>
-            </div>
-        </div>
-
-    </div>
-
-</section>
+    </section>
 
 
-<!-- DESTAQUE -->
+    <!-- =========================
+         DESTAQUE
+    ========================= -->
 
-<section class="detail">
+    <section class="feature">
 
-    <div class="detail-image">
+      <div class="container feature-grid">
 
-        <img
+        <div class="feature-image">
+          <img
             src="foto8.jpg"
-            alt="Soluções em esquadrias CR"
-        >
+            alt="Detalhe de projeto da CR Soluções em Esquadrias"
+            loading="lazy"
+          >
+        </div>
 
-    </div>
+        <div class="feature-content">
 
-    <div class="detail-content">
+          <div class="section-label">
+            Acabamento
+          </div>
 
-        <small>
-            Tecnologia & conforto
-        </small>
+          <div class="feature-line"></div>
 
-        <h2>
-            Tecnologia que acompanha o projeto.
-        </h2>
+          <h2>
+            O detalhe transforma o projeto.
+          </h2>
 
-        <p>
-            Esquadrias automatizadas e coberturas com abertura
-            automatizada unem praticidade, conforto e design,
-            trazendo novas possibilidades para ambientes
-            residenciais e comerciais.
-        </p>
+          <p>
+            Trabalhamos para que cada esquadria, vidro,
+            fachada ou elemento arquitetônico tenha um
+            acabamento à altura do projeto.
+          </p>
 
-        <a
-            href="https://wa.me/5515997498555?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20as%20soluções%20da%20CR."
-            target="_blank"
-            class="btn btn-dark"
-            style="margin-top:35px;width:max-content;"
-        >
-            Falar com a CR
-        </a>
+          <p>
+            Do planejamento à instalação, buscamos unir
+            estética, funcionalidade e precisão.
+          </p>
 
-    </div>
+        </div>
 
-</section>
+      </div>
+
+    </section>
 
 
-<!-- CONTATO -->
+    <!-- =========================
+         CONTATO
+    ========================= -->
 
-<section class="contact" id="contato">
+    <section class="contact" id="contato">
 
-    <div class="contact-grid">
+      <div class="container contact-grid">
 
         <div>
 
-            <h2>
-                Vamos conversar
-                sobre seu projeto?
-            </h2>
+          <div class="section-label" style="color:#aeb7c2;">
+            Vamos conversar
+          </div>
 
-            <p class="contact-text">
-                Entre em contato com a CR Soluções em Esquadrias
-                e solicite um orçamento.
-            </p>
+          <h2>
+            Seu projeto começa aqui.
+          </h2>
+
+          <p class="contact-intro">
+            Entre em contato com a CR Soluções em Esquadrias
+            para solicitar um orçamento ou tirar suas dúvidas.
+          </p>
+
+          <a
+            href="https://wa.me/5515997498555?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento."
+            target="_blank"
+            class="contact-button"
+          >
+            Falar pelo WhatsApp
+          </a>
 
         </div>
 
 
         <div class="contact-info">
 
-            <div class="contact-item">
-
-                <small>WhatsApp</small>
-
-                <a
-                    href="https://wa.me/5515997498555"
-                    target="_blank"
-                >
-                    (15) 99749-8555
-                </a>
-
-            </div>
-
-
-            <div class="contact-item">
-
-                <small>Instagram</small>
-
-                <a
-                    href="https://instagram.com/cr.soluçõesemesquadrias"
-                    target="_blank"
-                >
-                    @cr.soluçõesemesquadrias
-                </a>
-
-            </div>
-
-
-            <div class="contact-item">
-
-                <small>Endereço</small>
-
-                <span>
-                    Rua Doutor Fernando Costa, 193B<br>
-                    Centro — Itapetininga/SP
-                </span>
-
-            </div>
-
-
-            <div class="contact-item">
-
-                <small>Horário</small>
-
-                <span>
-                    Segunda a sexta — 08h às 18h<br>
-                    Sábado — 08h às 13h
-                </span>
-
-            </div>
-
-
+          <div class="contact-row">
+            <strong>WhatsApp</strong>
             <a
-                href="https://wa.me/5515997498555?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento."
-                target="_blank"
-                class="whatsapp"
+              href="https://wa.me/5515997498555"
+              target="_blank"
             >
-                Solicitar orçamento
+              (15) 99749-8555
             </a>
+          </div>
+
+          <div class="contact-row">
+            <strong>Instagram</strong>
+            <a
+              href="https://instagram.com/cr.solucoesemesquadrias"
+              target="_blank"
+            >
+              @cr.soluçõesemesquadrias
+            </a>
+          </div>
+
+          <div class="contact-row">
+            <strong>Endereço</strong>
+            <span>
+              Rua Doutor Fernando Costa, 193B<br>
+              Centro — Itapetininga/SP
+            </span>
+          </div>
+
+          <div class="contact-row">
+            <strong>Horários</strong>
+            <span>
+              Segunda a sexta: 08h às 18h<br>
+              Sábado: 08h às 13h
+            </span>
+          </div>
 
         </div>
 
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+
+    <div class="container footer-content">
+
+      <span>
+        © 2026 CR Soluções em Esquadrias
+      </span>
+
+      <span>
+        Itapetininga — SP
+      </span>
+
     </div>
 
-</section>
-
-</main>
+  </footer>
 
 
-<footer>
+  <!-- =========================
+       LIGHTBOX
+  ========================= -->
 
-    <span>
-        © 2026 CR Soluções em Esquadrias
-    </span>
+  <div class="lightbox" id="lightbox">
 
-    <span>
-        Itapetininga — SP
-    </span>
+    <button class="lightbox-close" id="lightboxClose">
+      ×
+    </button>
 
-</footer>
+    <button class="lightbox-prev" id="lightboxPrev">
+      ‹
+    </button>
 
+    <img id="lightboxImage" src="" alt="Projeto ampliado">
 
-<!-- LIGHTBOX -->
+    <button class="lightbox-next" id="lightboxNext">
+      ›
+    </button>
 
-<div class="lightbox" id="lightbox">
-
-    <div class="close" onclick="closeLightbox()">×</div>
-
-    <div class="prev" onclick="changeImage(-1)">‹</div>
-
-    <img id="lightboxImage" src="" alt="Projeto">
-
-    <div class="next" onclick="changeImage(1)">›</div>
-
-</div>
+  </div>
 
 
-<script>
+  <script>
 
-const galleryImages = [];
+    const galleryImages = [
+      "foto2.jpg",
+      "foto3.jpg",
+      "foto5.jpg",
+      "foto6.jpg",
+      "foto7.jpg",
+      "foto8.jpg",
+      "foto9.jpg",
+      "foto10.jpg",
+      "foto11.jpg",
+      "foto12.jpg",
+      "foto13.jpg",
+      "foto14.jpg",
+      "foto15.jpg",
+      "foto16.jpg",
+      "foto17.jpg",
+      "foto18.jpg",
+      "foto19.jpg",
+      "foto20.jpg"
+    ];
 
-document.querySelectorAll(".gallery-item img").forEach((img,index)=>{
+    const items = document.querySelectorAll(".gallery-item");
 
-    galleryImages.push(img.src);
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImage = document.getElementById("lightboxImage");
 
-    img.parentElement.addEventListener("click",()=>{
+    const closeButton = document.getElementById("lightboxClose");
+    const prevButton = document.getElementById("lightboxPrev");
+    const nextButton = document.getElementById("lightboxNext");
 
-        currentImage = index;
+    let currentIndex = 0;
 
-        document.getElementById("lightboxImage").src =
-            galleryImages[currentImage];
+    items.forEach((item, index) => {
 
-        document.getElementById("lightbox").classList.add("active");
+      item.addEventListener("click", () => {
+
+        currentIndex = index;
+
+        lightboxImage.src = galleryImages[currentIndex];
+
+        lightbox.classList.add("active");
+
+        document.body.style.overflow = "hidden";
+
+      });
 
     });
 
-});
 
+    function showImage(index) {
 
-let currentImage = 0;
+      if (index < 0) {
+        index = galleryImages.length - 1;
+      }
 
+      if (index >= galleryImages.length) {
+        index = 0;
+      }
 
-function closeLightbox(){
+      currentIndex = index;
 
-    document.getElementById("lightbox").classList.remove("active");
+      lightboxImage.src = galleryImages[currentIndex];
 
-}
-
-
-function changeImage(direction){
-
-    currentImage += direction;
-
-    if(currentImage < 0){
-        currentImage = galleryImages.length - 1;
     }
 
-    if(currentImage >= galleryImages.length){
-        currentImage = 0;
-    }
 
-    document.getElementById("lightboxImage").src =
-        galleryImages[currentImage];
-
-}
+    prevButton.addEventListener("click", () => {
+      showImage(currentIndex - 1);
+    });
 
 
-document.addEventListener("keydown",(event)=>{
+    nextButton.addEventListener("click", () => {
+      showImage(currentIndex + 1);
+    });
 
-    if(event.key === "Escape"){
+
+    closeButton.addEventListener("click", closeLightbox);
+
+
+    lightbox.addEventListener("click", (event) => {
+
+      if (event.target === lightbox) {
         closeLightbox();
+      }
+
+    });
+
+
+    function closeLightbox() {
+
+      lightbox.classList.remove("active");
+
+      document.body.style.overflow = "";
+
     }
 
-    if(event.key === "ArrowRight"){
-        changeImage(1);
-    }
 
-    if(event.key === "ArrowLeft"){
-        changeImage(-1);
-    }
+    document.addEventListener("keydown", (event) => {
 
-});
+      if (!lightbox.classList.contains("active")) {
+        return;
+      }
 
-
-document.getElementById("lightbox").addEventListener("click",(event)=>{
-
-    if(event.target.id === "lightbox"){
+      if (event.key === "Escape") {
         closeLightbox();
-    }
+      }
 
-});
+      if (event.key === "ArrowLeft") {
+        showImage(currentIndex - 1);
+      }
 
-</script>
+      if (event.key === "ArrowRight") {
+        showImage(currentIndex + 1);
+      }
+
+    });
+
+  </script>
 
 </body>
 </html>
 ```
-
